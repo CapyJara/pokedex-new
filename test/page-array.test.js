@@ -48,3 +48,17 @@ test('page 2 of 3 per page', assert => {
     // assert
     assert.deepEqual(result, ['four', 'five', 'six']);
 });
+
+test('page 3 of 4 per page', assert => {
+    // arrange
+    const pagingOptions = {
+        page: 3,
+        perPage: 4
+    };
+
+    // act
+    const result = pageArray(pages, pagingOptions);
+
+    // assert
+    assert.deepEqual(result, ['nine', 'ten']);
+});
