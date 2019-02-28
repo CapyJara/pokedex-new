@@ -43,8 +43,8 @@ test('if the template matches desired html', assert => {
     // assert
     assert.htmlEqual(result, `
         <a href="http://www.pokemon.com/us/pokedex/bulbasaur" class="pokemon-container">
-            <div class="grass pokemon-div">
-                <div class="poison type-two"></div>
+            <div class="grass pokemon-div" style="background-color: #78C850;">
+                <div class="poison type-two" style="background-color: #A040A0;"></div>
                 <h3 id="pokemon">bulbasaur</h3>
                 <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
                 <div class="stats">
