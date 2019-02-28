@@ -9,13 +9,28 @@ a {
 }
 
 header {
-    margin: 15px;
+    padding: 15px;
+    border-bottom: 1px solid black; 
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 #page-navigation {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -26,8 +41,9 @@ header {
 
 #pokedex-container {
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pokemon-div {
