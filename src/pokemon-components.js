@@ -17,3 +17,12 @@ export function makeHtmlTemplate(pokemon) {
     template.innerHTML = html;
     return template.content;
 }
+
+const pokedexContainer = document.getElementById('pokedex-container');
+
+export default function loadPokemon(pokedex) {
+    pokedex.forEach(pokemon => {
+        const dom = makeHtmlTemplate(pokemon);
+        pokedexContainer.appendChild(dom);
+    });
+}

@@ -24,7 +24,7 @@ header {
     margin: 8px;
 }
 
-#pokedex {
+#pokedex-container {
     display: flex;
     width: 80%;
     flex-wrap: wrap;
