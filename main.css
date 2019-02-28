@@ -48,9 +48,10 @@ header {
     align-self: flex-end;
 }
 
-h3 {
+#pokemon {
     position: relative;
     top: -15px;
+    text-transform: capitalize;
 }
 
 .pokemon-container img {
