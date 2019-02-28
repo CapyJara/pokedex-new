@@ -8,10 +8,20 @@ a {
     color: black;
 }
 
+header {
+    margin: 15px;
+}
+
 #page-navigation {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
+}
+
+#page-navigation button {
+    padding: 5px;
+    margin: 8px;
 }
 
 #pokedex {
