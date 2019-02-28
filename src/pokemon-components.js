@@ -1,8 +1,8 @@
 export function makeHtmlTemplate(pokemon) {
     const html = `
     <a href="${pokemon.pokedex}" class="pokemon-container">
-        <div class="${pokemon.type_1} pokemon-div">
-            <div class="${pokemon.type_2} type-two"></div>
+        <div class="${pokemon.type_1} pokemon-div" style="background-color: ${pokemon.color_1};">
+            <div class="${pokemon.type_2} type-two" style="background-color: ${pokemon.color_2};"></div>
             <h3 id="pokemon">${pokemon.pokemon}</h3>
             <img src="${pokemon.url_image}">
             <div class="stats">
