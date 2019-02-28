@@ -1,3 +1,4 @@
+import pageArray from '../src/page-array.js';
 const test = QUnit.test;
 
 QUnit.module('paging');
@@ -15,11 +16,6 @@ const pages = [
     'ten'
 ];
 
-function pageArray(pages, pagingOptions) {
-    const startIndex = (pagingOptions.page - 1) * pagingOptions.perPage;
-    const endIndex = startIndex + pagingOptions.perPage;
-    return pages.slice(startIndex, endIndex);
-}
 
 test('page 1 of 4 per page', assert => {
     // arrange
