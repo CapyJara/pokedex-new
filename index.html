@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <header>
+        <h1>Pokedex</h1>
+    </header>
+
+    <main>
+
+        <section id="page-navigation">
+            <button id="previous">Previous</button>
+            <p>Page <span id="page-num">1 of 2</span></p>
+            <button id="next">Next</button>
+        </section>
+
+        <section id="pokedex">
+            <a href="http://www.pokemon.com/us/pokedex/bulbasaur" class="pokemon-container">
+                <div class="grass pokemon-div">
+                    <div class="poison type-two"></div>
+                    <h3 id="pokemon">Bulbasaur</h3>
+                    <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+                    <div class="stats">
+                        <p>A: 49</p>
+                        <p>D: 49</p>
+                        <p>HP: 45</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://www.pokemon.com/us/pokedex/lanturn" class="pokemon-container">
+                <div class="water pokemon-div">
+                    <div class="electric type-two"></div>
+                    <h3 id="pokemon">Lanturn</h3>
+                    <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/171.png">
+                    <div class="stats">
+                        <p>A: 58</p>
+                        <p>D: 58</p>
+                        <p>HP: 125</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://www.pokemon.com/us/pokedex/igglybuff" class="pokemon-container">
+                <div class="normal pokemon-div">
+                    <div class="fairy type-two"></div>
+                    <h3 id="pokemon">Igglybuff</h3>
+                    <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/174.png">
+                    <div class="stats">
+                        <p>A: 30</p>
+                        <p>D: 15</p>
+                        <p>HP: 90</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+    </main>
+<script type="module" src="./src/main.js">  </script>
+</body>
+</html>
