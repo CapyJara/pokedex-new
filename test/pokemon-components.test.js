@@ -4,15 +4,15 @@ QUnit.module('template creation');
 
 function makeHtmlTemplate(pokemon) {
     const html = `
-    <a href="http://www.pokemon.com/us/pokedex/bulbasaur" class="pokemon-container">
-        <div class="grass pokemon-div">
-            <div class="poison type-two"></div>
-            <h3 id="pokemon">bulbasaur</h3>
-            <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+    <a href="${pokemon.pokedex}" class="pokemon-container">
+        <div class="${pokemon.type_1} pokemon-div">
+            <div class="${pokemon.type_2} type-two"></div>
+            <h3 id="pokemon">${pokemon.pokemon}</h3>
+            <img src="${pokemon.url_image}">
             <div class="stats">
-                <p>A: 49</p>
-                <p>D: 49</p>
-                <p>HP: 45</p>
+                <p>A: ${pokemon.attack}</p>
+                <p>D: ${pokemon.defense}</p>
+                <p>HP: ${pokemon.hp}</p>
             </div>
         </div>
     </a>`;
