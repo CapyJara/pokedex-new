@@ -7,6 +7,7 @@ import sortPokemon from './sorting/sort-pokemon.js';
 import loadSort from './sorting/sort-event.js';
 
 import filterPokemon from './filter/filter-pokemon.js';
+import loadFilter from './filter/filter-event.js';
 
 
 loadPaging(pokedex.length, pagingOptions => {
@@ -22,24 +23,6 @@ loadSort((sortChoice) => {
     });
 });
 
-
-const filterForm = document.getElementById('filter-form');
-
-function loadFilter(callback) {
-
-    filterForm.addEventListener('submit', event => {
-        event.preventDefault();
-        
-        const formDaddy = new FormData(filterForm);
-        
-        const filter = {
-            type: formDaddy.get('type-filter'),
-            generation: formDaddy.get('generation-filter')
-        };
-        
-        callback(filter);
-    });
-}
 
 loadFilter(filter => {
     const filteredList = filterPokemon(filter, pokedex);
