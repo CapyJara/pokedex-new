@@ -1,3 +1,5 @@
 import './html-equal.js';
-import './pokemon-components.test.js';
-import './page-array.test.js';
+import './paging/pokemon-components.test.js';
+import './paging/page-array.test.js';
+
+import './sorting/sort-pokemon.test.js';

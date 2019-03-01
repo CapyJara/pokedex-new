@@ -1,4 +1,4 @@
-import pageArray from '../src/page-array.js';
+import pageArray from '../../src/paging/page-array.js';
 const test = QUnit.test;
 
 QUnit.module('paging');

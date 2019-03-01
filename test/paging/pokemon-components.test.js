@@ -1,6 +1,6 @@
 const test = QUnit.test;
 
-import { makeHtmlTemplate } from '../src/pokemon-components.js';
+import { makeHtmlTemplate } from '../../src/pokemon-components.js';
 
 QUnit.module('template creation');
 
