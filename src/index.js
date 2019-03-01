@@ -9,6 +9,8 @@ import loadSort from './sorting/load-sort.js';
 import filterPokemon from './filter/filter-pokemon.js';
 import loadFilter from './filter/load-filter.js';
 
+const typeFilter = document.getElementById('type-filter');
+
 
 loadPaging(pokedex.length, pagingOptions => {
     const pagedPokedex = pageArray(pokedex, pagingOptions);
@@ -18,11 +20,29 @@ loadPaging(pokedex.length, pagingOptions => {
 loadSort(sortChoice => {
     const sortedPokemon = sortPokemon(pokedex, sortChoice);
 
-    loadPaging(sortedPokemon.length, pagingOptions => {
-        const pagedPokedex = pageArray(pokedex, pagingOptions);
-        loadPokemon(pagedPokedex);
-    });
+    if(typeFilter.value) {
+        loadFilter(filter => {
+            const filteredList = filterPokemon(filter, pokedex);
+        
+            loadPaging(filteredList.length, pagingOptions => {
+                const pagedPokedex = pageArray(filteredList, pagingOptions);
+                loadPokemon(pagedPokedex);
+            });
+            loadPaging(filteredList.length, pagingOptions => {
+                const pagedPokedex = pageArray(filteredList, pagingOptions);
+                loadPokemon(pagedPokedex);
+            });
+        });
+    } else {
+        loadPaging(sortedPokemon.length, pagingOptions => {
+            const pagedPokedex = pageArray(pokedex, pagingOptions);
+            loadPokemon(pagedPokedex);
+        });
+    }
+
 });
+
+
 
 loadFilter(filter => {
     const filteredList = filterPokemon(filter, pokedex);
