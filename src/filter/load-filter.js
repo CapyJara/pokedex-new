@@ -8,8 +8,7 @@ export default function loadFilter(callback) {
         const formDaddy = new FormData(filterForm);
         
         const filter = {
-            type: formDaddy.get('type-filter'),
-            generation: formDaddy.get('generation-filter')
+            type_1: formDaddy.get('type-filter'),
         };
         
         callback(filter);
