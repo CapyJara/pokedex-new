@@ -50,6 +50,19 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 8px;
 }
 
+#sort-select {
+    position: relative;
+    left: 50px;
+    top: 15px;
+}
+
+#sort-p {
+    position: relative;
+    left: 50px;
+    top: 10px
+}
+
+
 #pokedex-container {
     display: flex;
     width: 100%;
