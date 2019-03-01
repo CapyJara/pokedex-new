@@ -17,9 +17,9 @@ test('sorting by id', assert => {
     const results = sortPokemon(poxedex, sortChoice);
     // assert
     assert.deepEqual(results, [
-        { id: 2, height: 70, hp: 100 },
+        { id: 15, height: 50, hp: 80 },
         { id: 8, height: 100, hp: 40 },
-        { id: 15, height: 50, hp: 80 }
+        { id: 2, height: 70, hp: 100 }
     ]);
 });
 
@@ -30,9 +30,9 @@ test('sorting by height', assert => {
     const results = sortPokemon(poxedex, sortChoice);
     // assert
     assert.deepEqual(results, [
-        { id: 15, height: 50, hp: 80 },
+        { id: 8, height: 100, hp: 40 },
         { id: 2, height: 70, hp: 100 },
-        { id: 8, height: 100, hp: 40 }
+        { id: 15, height: 50, hp: 80 }
     ]);
 });
 
@@ -43,8 +43,8 @@ test('sorting by hp', assert => {
     const results = sortPokemon(poxedex, sortChoice);
     // assert
     assert.deepEqual(results, [
-        { id: 8, height: 100, hp: 40 },
+        { id: 2, height: 70, hp: 100 },
         { id: 15, height: 50, hp: 80 },
-        { id: 2, height: 70, hp: 100 }
+        { id: 8, height: 100, hp: 40 }
     ]);
 });
