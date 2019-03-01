@@ -17,8 +17,7 @@
 
         <p id="sort-p">Sort</p>
         <select id="sort-select">
-            <option disabled selected value="">Choose a Field</option>
-            <option value="height">Height</option>
+            <option disabled selected value="empty">Choose a Field</option>
             <option value="attack">Attack</option>
             <option value="defense">Defense</option>
             <option value="hp">Hp</option>
@@ -27,7 +26,7 @@
         <p id="filter-p">Filter</p>
         <form id="filter-form">
             <label>
-                Type: <input type="text" name="type-filter">
+                Type: <input type="text" name="type-filter" id="type-filter">
             </label>
             <button>FILTER</button>
         </form>
