@@ -4,7 +4,7 @@ const nextButton = document.getElementById('next-button');
 const totalPages = document.getElementById('total-pages');
 const pageTo = document.getElementById('page-to');
 
-const PER_PAGE = 18;
+const PER_PAGE = 15;
 
 export default function loadPaging(totalCount, callback) {
     const totalPageCount = Math.ceil(totalCount / PER_PAGE);

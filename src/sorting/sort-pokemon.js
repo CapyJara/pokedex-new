@@ -6,8 +6,8 @@ export default function sortPokemon(pokedex, sortChoice) {
             return 0;
         }
         if(a[property] > b[property]) {
-            return 1;
+            return -1;
         }
-        return -1;
+        return 1;
     });
 }
