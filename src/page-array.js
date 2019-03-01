@@ -1,5 +1,5 @@
-export default function pageArray(pages, pagingOptions) {
+export default function pageArray(pokedex, pagingOptions) {
     const startIndex = (pagingOptions.page - 1) * pagingOptions.perPage;
     const endIndex = startIndex + pagingOptions.perPage;
-    return pages.slice(startIndex, endIndex);
+    return pokedex.slice(startIndex, endIndex);
 }
