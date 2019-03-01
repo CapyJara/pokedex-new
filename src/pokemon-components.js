@@ -1,8 +1,11 @@
 export function makeHtmlTemplate(pokemon) {
+
+    const colorTwo = pokemon.color_2 === 'NA' ? '' : pokemon.color_2;
+    
     const html = `
     <a href="${pokemon.pokedex}" class="pokemon-container">
         <div class="${pokemon.type_1} pokemon-div" style="background-color: ${pokemon.color_1};">
-            <div class="${pokemon.type_2} type-two" style="background-color: ${pokemon.color_2};"></div>
+            <div class="${pokemon.type_2} type-two" style="background-color: ${colorTwo};"></div>
             <h3 id="pokemon">${pokemon.pokemon}</h3>
             <img src="${pokemon.url_image}">
             <div class="stats">
@@ -21,6 +24,9 @@ export function makeHtmlTemplate(pokemon) {
 const pokedexContainer = document.getElementById('pokedex-container');
 
 export default function loadPokemon(pokedex) {
+    while(pokedexContainer.children.length > 0) {
+        pokedexContainer.lastElementChild.remove();
+    }
     pokedex.forEach(pokemon => {
         const dom = makeHtmlTemplate(pokemon);
         pokedexContainer.appendChild(dom);
