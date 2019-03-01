@@ -2,7 +2,7 @@ export function makeHtmlTemplate(pokemon) {
 
     const colorTwo = pokemon.color_2 === 'NA' ? '' : pokemon.color_2;
     
-    const html = `
+    const html = /*html*/ `
     <a href="${pokemon.pokedex}" class="pokemon-container">
         <div class="${pokemon.type_1} pokemon-div" style="background-color: ${pokemon.color_1};">
             <div class="${pokemon.type_2} type-two" style="background-color: ${colorTwo};"></div>
