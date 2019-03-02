@@ -1,13 +1,13 @@
 export default function sortPokemon(pokedex, sortChoice) {
-    const property = sortChoice.property;
+    const property = sortChoice.property.split('-');
 
-    return pokedex.sort((a, b) => {
-        if(a[property] === b[property]) {
-            return 0;
-        }
-        if(a[property] > b[property]) {
-            return -1;
-        }
-        return 1;
-    });
+    if(property[1] === 'low') {
+        return pokedex.sort((a, b) => {
+            return a[property[0]] - b[property[0]];
+        });
+    } else {
+        return pokedex.sort((a, b) => {
+            return a[property] - b[property];
+        });
+    }
 }
