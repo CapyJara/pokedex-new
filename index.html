@@ -16,18 +16,28 @@
     <main>
 
         <form id="filter-form">
+
             <p id="sort-p">Sort</p>
-            <select id="sort-select">
-                <option disabled selected value="empty">Choose a Field</option>
-                <option value="attack">Attack</option>
-                <option value="defense">Defense</option>
-                <option value="hp">Hp</option>
-            </select>
-            <p id="filter-p">Filter</p>
-            <label>
-                Type: <input type="text" name="type-filter" id="type-filter">
-            </label>
-            <button>FILTER</button>
+            <div id="select-div">
+                <select id="sort-select">
+                    <option selected value="empty">Choose a Field</option>
+                    <option value="attack">Attack</option>
+                    <option value="defense">Defense</option>
+                    <option value="hp">Hp</option>
+                </select>
+            </div>
+
+            <p>Filter:</p>
+            <div id="filter-div">
+                <label>
+                    <input type="text" name="type-filter" id="type-filter" placeholder="Type">
+                </label>
+            </div>
+
+            <div id="submit-div">
+                <button>Submit</button>
+            </div>
+
         </form>
         
 
@@ -36,7 +46,7 @@
             <p>
                 Page<input type="number" name="page-to" id="page-to" placeholder="">
                 of
-                <span id="total-pages">2</span>
+                <span id="total-pages"></span>
             </p>
             <button id="next-button">Next &gt </button>
         </section>
