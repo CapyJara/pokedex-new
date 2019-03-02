@@ -8,32 +8,59 @@ a {
     color: black;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
 header {
     padding: 15px;
     border-bottom: 1px solid black; 
     margin-bottom: 15px;
-}
-
-h1 {
     font-family: 'Press Start 2P', cursive;
 }
 
-h3 {
-    font-size: 1.2em;
+
+main {
+    display: grid;
+    grid-template-rows: 5% 95%;
+    grid-template-columns: 15% 85%;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    /* width: 1200px; */
+/* filter-form */
+
+#filter-form {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    
+    display: grid;
+    grid-template-rows: 5% 5% 5% 5% 5% 75%
 }
 
+#filter-form p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sort-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+/* nav bar */
 #page-navigation {
+    grid-column-start: 2;
+    grid-row-start: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
 }
 
 #page-navigation input {
@@ -47,37 +74,13 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none; 
 }
 
-#page-navigation button {
-    padding: 5px;
-    margin: 8px;
-}
 
-#sort-select {
-    position: relative;
-    left: 50px;
-    top: 30px;
-}
 
-#sort-p {
-    position: relative;
-    left: 50px;
-    top: 10px
-}
-
-#filter-form {
-    position: relative;
-    left: 230px;
-    bottom: 5px;
-}
-
-#filter-p {
-    position: relative;
-    left: 230px;
-    bottom: 25px;
-}
-
+/* pokedex */
 
 #pokedex-container {
+    grid-column-start: 2;
+    grid-row-start: 2;
     display: flex;
     width: 100%;
     flex-wrap: wrap;

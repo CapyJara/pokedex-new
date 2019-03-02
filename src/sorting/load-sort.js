@@ -1,8 +1,9 @@
+const filterForm = document.getElementById('filter-form');
 const sortChoice = document.getElementById('sort-select');
 
 export default function loadSort(callback) {
     
-    sortChoice.addEventListener('change', () => {
+    filterForm.addEventListener('submit', () => {
         const selectedSort = {
             property: sortChoice.value
         };

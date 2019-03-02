@@ -28,10 +28,6 @@ loadSort(sortChoice => {
                 const pagedPokedex = pageArray(filteredList, pagingOptions);
                 loadPokemon(pagedPokedex);
             });
-            loadPaging(filteredList.length, pagingOptions => {
-                const pagedPokedex = pageArray(filteredList, pagingOptions);
-                loadPokemon(pagedPokedex);
-            });
         });
     } else {
         loadPaging(sortedPokemon.length, pagingOptions => {
@@ -39,7 +35,6 @@ loadSort(sortChoice => {
             loadPokemon(pagedPokedex);
         });
     }
-
 });
 
 
