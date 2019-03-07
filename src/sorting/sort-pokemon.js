@@ -10,4 +10,4 @@ export default function sortPokemon(pokedex, sortChoice) {
             return a[property] - b[property];
         });
     }
-}
+}dwfgsvsdvcs
