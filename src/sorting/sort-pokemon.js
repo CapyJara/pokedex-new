@@ -11,3 +11,5 @@ export default function sortPokemon(pokedex, sortChoice) {
         });
     }
 }
+
+things to remove
